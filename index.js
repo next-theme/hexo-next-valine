@@ -5,6 +5,10 @@
 const Util = require('@next-theme/utils');
 const utils = new Util(hexo, __dirname);
 
+function capitalize(input) {
+  return input.toString().charAt(0).toUpperCase() + input.toString().substr(1);
+}
+
 function iconText(icon, key, defaultValue) {
   if (!defaultValue) {
     defaultValue = capitalize(key);
