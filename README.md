@@ -1,6 +1,6 @@
 # Hexo NexT Valine
 
-![Theme Version](https://img.shields.io/badge/NexT-v7.3.0+-blue?style=flat-square)
+![Theme Version](https://img.shields.io/badge/NexT-v8.2.0+-blue?style=flat-square)
 ![Package Version](https://img.shields.io/github/package-json/v/next-theme/hexo-next-valine?style=flat-square)
 
 Valine comment system for NexT. Valine is a fast, simple & efficient Leancloud based no back end comment system.

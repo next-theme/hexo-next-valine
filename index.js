@@ -27,7 +27,7 @@ function iconText(icon, key, defaultValue) {
 
 function warning(...args) {
   hexo.log.warn(`Since ${args[0]} is turned on, the ${args[1]} is disabled to avoid potential hazards.`);
-};
+}
 
 // Add comment
 hexo.extend.filter.register('theme_inject', injects => {
