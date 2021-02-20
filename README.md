@@ -5,6 +5,9 @@
 
 Valine comment system for NexT. Valine is a fast, simple & efficient Leancloud based no back end comment system.
 
+> **WARNING**  
+> Valine is no longer open source, and it is reported to have XSS vulnerabilities and data security issues. Use at your own risk.
+
 ## Install
 
 ```bash
