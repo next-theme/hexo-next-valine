@@ -3,9 +3,9 @@
 ![Theme Version](https://img.shields.io/badge/NexT-v8.2.0+-blue?style=flat-square)
 ![Package Version](https://img.shields.io/github/package-json/v/next-theme/hexo-next-valine?style=flat-square)
 
-Valine comment system for NexT. Valine is a fast, simple & efficient Leancloud based no back end comment system.
+[Valine](https://github.com/xCss/Valine) comment system for NexT. Valine is a fast, simple & efficient Leancloud based no back end comment system.
 
-> **WARNING**  
+> **⚠️ WARNING**  
 > Valine is no longer open source, and it is reported to have XSS vulnerabilities and data security issues. Use at your own risk.
 
 ## Install
