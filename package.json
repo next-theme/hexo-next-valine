@@ -1,6 +1,6 @@
 {
   "name": "hexo-next-valine",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Valine comment system for NexT.",
   "main": "index.js",
   "scripts": {
