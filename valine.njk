@@ -1,7 +1,7 @@
 {%- if next_data %}
 
 {{ next_data('valine', config.valine, {
-  libUrl: config.valine.libUrl | default('https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',true),
+  libUrl: config.valine.libUrl | default('https://npm.elemecdn.com/valine@1.5.1/dist/Valine.min.js',true),
   el: '#valine-comments',
   path: url_for(page.path) | replace(r/index\.html$/, ''),
   serverURLs: config.valine.serverURLs or 'https://' + config.valine.appId.slice(0, 8) | lower + '.api.lncldglobal.com'
@@ -22,7 +22,7 @@ document.addEventListener('page:loaded', () => {
 {%- else %}
 
 {%- set serverURLs = config.valine.serverURLs or 'https://' + config.valine.appId.slice(0, 8) | lower + '.api.lncldglobal.com' %}
-{%- set libUrl = config.valine.libUrl | default('https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',true) %}
+{%- set libUrl = config.valine.libUrl | default('https://npm.elemecdn.com/valine@1.5.1/dist/Valine.min.js',true) %}
 <script>
 NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript({{libUrl}}, () => {
