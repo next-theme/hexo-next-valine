@@ -16,3 +16,4 @@ valine:
   recordIP: false # Whether to record the commenter IP
   enableQQ: false # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
   requiredFields: [] # Set required fields: [nick] | [nick, mail]
+  libUrl: https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js # Valine.min.js file URL in CDN (or local path)
