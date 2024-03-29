@@ -9,7 +9,7 @@
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.valine.el)
     .then(() => NexT.utils.getScript(
-      'https://fastly.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js',
+      'https://registry.npmmirror.com/valine/latest/files/dist/Valine.min.js',
       { condition: window.Valine }
     ))
     .then(() => {
@@ -23,7 +23,7 @@ document.addEventListener('page:loaded', () => {
 {%- set serverURLs = config.valine.serverURLs or 'https://' + config.valine.appId.slice(0, 8) | lower + '.api.lncldglobal.com' %}
 <script>
 NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('https://fastly.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+  NexT.utils.getScript('https://registry.npmmirror.com/valine/latest/files/dist/Valine.min.js', () => {
     new Valine(Object.assign({{ config.valine | safedump }}, {
       el: '#valine-comments',
       path: {{ url_for(page.path) | replace(r/index\.html$/, '') | safedump }},
