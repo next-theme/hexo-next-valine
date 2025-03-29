@@ -1,7 +1,5 @@
-{%- if next_data %}
-
 {{ next_data('valine', config.valine, {
-  libUrl: config.valine.libUrl | default('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js',true),
+  libUrl: config.valine.libUrl | default('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.3/Valine.min.js', true),
   el: '#valine-comments',
   path: url_for(page.path) | replace(r/index\.html$/, ''),
   serverURLs: config.valine.serverURLs or 'https://' + config.valine.appId.slice(0, 8) | lower + '.api.lncldglobal.com'
@@ -18,21 +16,3 @@ document.addEventListener('page:loaded', () => {
     });
 });
 </script>
-
-{%- else %}
-
-{%- set serverURLs = config.valine.serverURLs or 'https://' + config.valine.appId.slice(0, 8) | lower + '.api.lncldglobal.com' %}
-{%- set libUrl = config.valine.libUrl | default('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js',true) %}
-<script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript({{libUrl}}, () => {
-    new Valine(Object.assign({{ config.valine | safedump }}, {
-      el: '#valine-comments',
-      path: {{ url_for(page.path) | replace(r/index\.html$/, '') | safedump }},
-      serverURLs: {{ serverURLs | safedump }}
-    }));
-  }, window.Valine);
-});
-</script>
-
-{%- endif %}
